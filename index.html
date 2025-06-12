@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ANAGHA P</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">	
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<!-- Splash Screen -->
+<div id="splash-screen">
+  <h1 id="name">
+    ANAGHA&nbsp;P
+  </h1>
+</div>
+
+<div class="ball" id="ball"></div>
+<header>	
+	<div class="container" id="home">
+		<nav class="py-4">
+			<div id="logo">
+				<a href="#" class="logo-text">ANAGHA&nbsp;P</a>
+			</div>
+			<input type="checkbox" id="drop" />
+			<label for="drop" class="toggle">
+			<span class="bar bar1"></span>
+			<span class="bar bar2"></span>
+			<span class="bar bar3"></span>
+			</label>
+
+
+
+
+        	<input type="checkbox" id="drop" />
+            <ul class="menu mt-2">
+				<li class="mr-lg-4 mr-3 active"><a href="#">Home</a></li>
+				<li class="mr-lg-4 mr-3"><a href="#about">About</a></li>
+				<li class="mr-lg-4 mr-3"><a href="#experience">Experience</a></li>
+				<li class="mr-lg-4 mr-3"><a href="#project">Project</a></li>
+				<li><a href="./assets/download/Anagha_Resume.pdf" target="_blank">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<li><a href="https://github.com/Anagha48" target="_blank"><span class="fa-brands fa-github"></span></a></li>           
+				<li><a href="https://www.linkedin.com/in/anagha-p-85367625b/" target="_blank"><span class="fa-brands fa-linkedin-in"></span></a></li>
+			</ul>
+        </nav>
+	</div>
+</header>
+		
+<!-- home -->
+<section class="banner animate-on-scroll">
+	<div class="container">
+		<div class="row banner_info d-flex align-items-center justify-content-between">
+			<div class="col-md-7 banner-content">
+				<span class="mb-4">Hi, I'm </span>
+				<h3 class="mb-4">Anagha P</h3>
+				<div>
+					<h2 class="editContent" id="text1">MCA Graduate</h2>
+					<h2 class="editContent" id="text2" style="display: none;">Front End Developer</h2>
+					<h2 class="editContent" id="text3" style="display: none;">Python Developer</h2>
+				</div>
+				<p> Passionate about building visually stunning, high-performing, and intuitive web experiences.</p>
+				<div class="btn-container mt-4">
+					<a href="#" class="button1">Hire Me</a>
+					<a href="./assets/download/Anagha_Resume.pdf" target="_blank" class="button2">
+						View CV <i class="fa-solid fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="frame">
+					<img src="./assets/images/photo.jpg" alt="photo">
+				</div>					
+			</div>	
+		</div>
+	</div>
+</section>
+<!-- home -->
+ 
+<script>
+    function typeWriterEffect(element, text, speed, callback) {
+        let i = 0;
+        element.style.display = "block";
+        element.innerHTML = "";
+        function typing() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, speed);
+            } else {
+                setTimeout(callback, 1000);
+            }
+        }
+        typing();
+    }
+
+    function startAnimation() {
+        let text1 = document.getElementById("text1");
+        let text2 = document.getElementById("text2");
+		let text3 = document.getElementById("text3");
+        
+        typeWriterEffect(text1, "MCA Graduate", 100, function () {
+            text1.style.display = "none"; 
+            typeWriterEffect(text2, "Front End Developer", 100, function () {
+                text2.style.display = "none"; 
+				typeWriterEffect(text3, "Python Developer", 100, function () {
+					text3.style.display = "none"; 
+                setTimeout(startAnimation, 0);
+            });
+        });
+	});
+    }
+
+    window.onload = startAnimation;
+</script>
+	
+<!-- about -->
+<section id="about" class="animate-on-scroll">
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md-5">
+				<div class="frame">
+					<img src="./assets/images/photo.jpg" alt="about image loading">
+				</div>
+			</div>
+			<div class="col-md-7 about-content">	
+				<h3 class="heading">ABOUT ME</h3>
+				<p class="mt-3">
+					I’m a passionate and self-motivated Frontend Developer with hands-on experience in building responsive and interactive websites. My skill set includes HTML, CSS, JavaScript, jQuery, Bootstrap, and React. I’ve collaborated with UI designers and backend developers to deliver user-centric and functional web interfaces.
+				</p>
+				<p>
+					I’m enthusiastic about learning new technologies and continuously improving my skills to build seamless digital experiences.
+				</p>
+
+		        <div class="collapse-section">
+					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#skillsContent" aria-expanded="false">
+						<span class="heading">Skills</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png" class="img-fluid"></span>						
+					</div>
+					<div id="skillsContent" class="collapse section-content">
+						<div class="skill-item">
+							<div class="items">
+								<i class="fa-brands fa-html5"></i>
+							    <p>HTML</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-css3"></i>
+								<p>CSS</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-js"></i>
+								<p>Javascript</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-bootstrap"></i>
+								<p>Bootstrap</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-react"></i>
+								<p>React</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-python"></i>
+								<p>Python</p>
+							</div>
+							<div class="items">
+								<i class="fa-brands fa-python"></i>
+								<p>Django</p>
+							</div>							
+							<div class="items">
+								<i class="fa-brands fa-python"></i>
+								<p>Flask</p>
+							</div>
+							<div class="items">
+								<i class="fa-solid fa-database"></i>
+								<p>SQL</p>
+							</div>
+							</div>
+						</div>						
+					</div>
+				
+
+				<div class="collapse-section">
+					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#educationContent" aria-expanded="false">
+						<span class="heading">Education</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png"></span>
+					</div>
+					<div id="educationContent" class="collapse section-content">
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Master of Computer Applications (MCA)</h5>
+							</div>
+							<span class="clg_name">Chinmaya Institute of Technology</span><br/>
+							<span class="">KANNUR UNIVERSITY</span><br/>
+							<span>2022-2024</span>
+						</div>
+
+						<div class="education-item py-2">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Bachelor of Computer Applications (BCA)</h5>
+							</div>
+							<span class="clg_name">Chinmaya Mission College</span><br/>
+							<span class="">KERALA UNIVERSITY</span><br/>
+							<span>2018-2021</span>
+						</div>
+
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Plus Two : Biology Science</h5>
+							</div>
+							<span class="clg_name">GHSS Morazha</span><br/>
+							<span class="">Kerala State Board</span><br/>
+							<span>2016-2018</span>
+						</div>
+
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>SSLC</h5>
+							</div>
+							<span class="clg_name">GHSS Morazha</span><br/>
+							<span class="">Kerala State Board</span><br/>
+							<span>2015-2016</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="collapse-section">
+					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#achievementContent" aria-expanded="false">
+						<span class="heading">Achievement</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png"></span>
+					</div>
+					<div id="achievementContent" class="collapse section-content">						
+						<div class="achievement-item">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>React.js Premium Crash Course</h5>	
+							</div>							
+							<span>DECEMBER 2024</span><br/>
+							<span>Completed the "React.js Premium Crash Course", acquiring in-depth knowledge of building dynamic and responsive web applications using React.js.</span><br/>
+							<a href="./assets/download/React.js.pdf" target="_blank" class="certificate-link">View Certificate<i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>Work Readiness Program | Additional skill Acquisition Programme (ASAP)</h5>
+							</div>							
+							<span>NOVEMBER 2024</span><br/>
+							<span>Successfully completed the work Readiness Programme conducted by ASAP Kerala in association with KKEM.</span><br/>
+							<a href="./assets/download/certificate_workreadiness.pdf" target="_blank" class="certificate-link">View Certificate<i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>Build free website with WordPress</h5>
+							</div>							
+							<span>MARCH 7, 2024</span><br/>
+							<span>Completed a course on "Build Free Website with WordPress", gaining hands-on experience in creating and customizing websites using the WordPress platform.</span><br/>
+							<a href="./assets/download/wordpress.pdf" target="_blank" class="certificate-link">View Certificate<i class="fa-solid fa-arrow-right"></i></a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>MERN Stack Project Course - Build Fullstack React App</h5>
+							</div>					
+							<span>JULY 2023</span><br/>
+							<span>Completed the "MERN Stack Project Course – Build Fullstack React App", gaining practical experience in developing full-stack web applications using MongoDB, Express.js, React.js, and Node.js.</span><br/>
+							<a href="./assets/download/mern-certificate.pdf" target="_blank" class="certificate-link">View Certificate<i class="fa-solid fa-arrow-right"></i></a>						
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- experience -->
+<section id="experience" class="animate-on-scroll">
+	<div class="container">
+		<h3 class="heading">EXPERIENCE</h3>
+		<div class="row mt-3 g-4">
+			<div class="col-12 col-md-6 ">
+				<div class="experience-item h-100">
+					<h3>Frontend Developer</h3>
+					<p> Experienced Frontend Developer with a strong foundation in HTML, CSS, JavaScript, Bootstrap, and React.</p>
+					<div id="hidden-content1" class="details" style="display: none; opacity: 0; transition: opacity 0.5s ease, transform 0.5s ease;">
+						<p>  Successfully built responsive and user-friendly websites by closely collaborating with UI/UX designers and Backend Developers.</p>
+					</div>
+					<a href="#" class="read-more-link" data-target="hidden-content1">Read More</a>
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="experience-item">
+					<h3>Python Fullstack Development Intern</h3>
+					<p>
+						Successfully completed a Python Full-Stack Development course focused on both frontend and backend technologies. 
+						Gained hands-on experience in developing web applications using industry-relevant tools and frameworks.
+					</p>
+					<div id="hidden-content2" class="details" style="display: none; opacity: 0; transition: opacity 0.5s ease;">
+						<ul>
+							<li>Created responsive web interfaces using HTML, CSS, JavaScript, and Bootstrap.</li>
+							<li>Developed backend functionalities using Python frameworks like Django and Flask.</li>
+							<li>Managed databases using SQLite and MySQL for effective data handling.</li>
+							<li>Built and integrated RESTful APIs with frontend components.</li>
+							<li>Followed MVC architecture and improved project deployment and debugging skills.</li>
+						</ul>
+					</div>
+					<a href="#" class="read-more-link" data-target="hidden-content2">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- experience -->
+
+
+<!-- work -->
+<section id="project" class="animate-on-scroll"> 
+  <div class="container">
+    <h3 class="heading">WORK</h3>
+    <div class="row g-4 mt-3 align-items-stretch">	
+
+      <div class="col-12 col-md-3">
+        <div class="card h-100 d-flex justify-content-center align-items-center text-center">
+          <a href="#" target="_blank">
+            <img src="./assets/images/crystal.svg" class="card-img-top img-fluid" alt="Crystal Wellness">
+          </a>
+		  <div class="project-link-container">
+			<a href="https://crystalwellness.netlify.app/" class="project-link" target="_blank">DEMO</a>
+		  	<a href="https://github.com/Anagha48/CRYSTAL_LAB" class="project-link" target="_blank">CODE</a>
+		  </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-3">
+        <div class="card h-100 d-flex justify-content-center align-items-center text-center">
+			<a href="#" target="_blank">
+            <img src="./assets/images/panda7.svg" class="card-img-top img-fluid" alt="Panda7">
+			<div class="project-link-container">
+				<a href="https://panda7.ca/" class="project-link" target="_blank">DEMO</a>
+			</div>
+          </a>
+        </div>
+      </div>
+
+	  <div class="col-12 col-md-3">
+        <div class="card h-100 d-flex justify-content-center align-items-center text-center">
+			<a href="#" target="_blank">
+            <img src="./assets/images/kiwisoft.svg" class="card-img-top img-fluid" alt="Panda7">
+			<div class="project-link-container">
+				<a href="https://kiwisoft.in/" class="project-link" target="_blank">DEMO</a>
+			</div>
+          </a>
+        </div>
+      </div>
+	   <div class="col-12 col-md-3">
+        <div class="card h-100 d-flex justify-content-center align-items-center text-center">
+			<a href="#" target="_blank">
+            <img src="./assets/images/rayarambalam.svg" class="card-img-top img-fluid" alt="Panda7">
+			<div class="project-link-container">
+				<a href="https://rayaramangalamtemple.com/" class="project-link" target="_blank">DEMO</a>
+			</div>
+          </a>
+        </div>
+      </div>
+
+  </div>
+</section> 
+<!-- work -->
+
+<!-- contact -->
+<section class="contact animate-on-scroll" id="contact">
+	<div class="container">
+		<h3 class="heading">Contact</h3>
+		<div class="row contact-grids mt-4">
+			<div class="col-lg-5 contact-left">
+				<h4 class="mb-4">ADDRESS INFO</h4>
+				<div class="row">
+					<div class="col-1 pr-0 icon">
+						<span class="fa fa-map-marker" aria-hidden="true"></span>
+					</div>
+					<div class="col-11">
+						<p>Kannur - 670331</p>
+						<p>Kerala,India</p>
+					</div>
+					<div class="col-1 pr-0 icon my-2">
+						<span class="fa fa-phone" aria-hidden="true"></span>
+					</div>
+					<div class="col-11 my-2">
+						<p> +91 7034215312</p>
+					</div>
+					<div class="col-1 pr-0 icon">
+						<span class="fa fa-envelope-open" aria-hidden="true"></span>
+					</div>
+					<div class="col-11">
+						<p><a href="mailto:example@email.com" class="email">anagharamesh901@gmail.com</a></p>
+					</div>
+					<div class="map col-sm-11 mt-4">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.9139577711144!2d75.32180967416325!3d11.980455388251213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4159382bf28fd%3A0x2e9dbd8b77815b86!2sPaliyathuvalappu!5e0!3m2!1sen!2sin!4v1748543222666!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7 mt-lg-0 mt-5 contact-right">
+				<h4 class="mb-4">CONTACT INFO</h4>
+				<form>
+					<label><span class="fa mr-2 fa-user" aria-hidden="true"></span> Name</label>
+					<input type="text" name="Name" placeholder="Name" required="">
+					<div class="clearfix"></div>
+
+					<label><span class="fa mr-2 fa-envelope-open" aria-hidden="true"></span>Email</label>
+					<input type="email" name="Email" placeholder="Email" required="">
+					<div class="clearfix"></div>
+
+					<label><span class="fa mr-2 fa-phone" aria-hidden="true"></span>Phone</label>
+					<input type="text" name="Phone" placeholder="Phone" required="">
+					<div class="clearfix"></div>
+
+					<label><span class="fa mr-2 fa-edit" aria-hidden="true"></span>Message</label>
+					<textarea name="Message" placeholder="Message..."  required=""></textarea>
+
+					<!-- Submit button -->
+					<div class="clearfix"></div>
+					<button type="submit" class="btn-submit">
+						Submit
+					</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- contact -->
+
+
+<!-- footer -->
+<footer class="pt-5">
+	<div class="container">		
+		<div class="w3layoutsinfo-grids">
+			<div class="w3layouts-grid-left w3layouts-grid-right text-center">
+				<div class="social">
+					<ul>					  
+						<li>
+							<a href="https://wa.me/7034215312" target="_blank">
+							  <span class="fa-brands fa-whatsapp"></span>
+							</a>
+						</li>
+						<li>
+							<a href="mailto:anagharamesh901@gmail.com"><span class="fa-solid fa-envelope"></span></a>
+						</li>			
+						<li>
+							<a href="https://www.instagram.com/ana_gha_p?igshid=Yzg5MTU1MDY"><span class="fa-brands fa-instagram"></span></a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/anagha-p-85367625b/"><span class="fa-brands fa-linkedin-in"></span></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright text-center">
+			<a href="#home" class="move-top scroll"><span class="fa fa-angle-up" aria-hidden="true"></span></a>
+		</div>
+	</div>
+</footer> 
+<!-- //footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
